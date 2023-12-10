@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(queryString);
   desenharSilo(ctx, raio, altura, y);
   if (queryString) gerarSilo(queryString);
+  else gerarSilo();
 });
 
 function formSubmit(e) {
@@ -85,9 +86,8 @@ function gerarSilo(m) {
 
 
   altura = Math.pow((3 * volume) / Math.PI, 1 / 3);
-  altura = altura.toFixed(3);
 
-  raio = Math.pow((3 * volume) / (8 * Math.PI), 1 / 3) / 2;
+  raio = Math.pow((3 * volume) / (Math.PI), 1 / 3) / 2;
 
   area = 2 * Math.PI * raio * altura + 2 * Math.PI * Math.pow(raio, 2);
   
@@ -99,7 +99,7 @@ function gerarSilo(m) {
     console.log(custoTotal2/area);
   document.querySelector("#raio").innerHTML = raio.toFixed(3).replace(".", ",");
   document.querySelector("#volume").innerHTML = volume;
-  document.querySelector("#altura").innerHTML = altura
+  document.querySelector("#altura").innerHTML = altura.toFixed(3)
     .toString()
     .replace(".", ",");
   document.querySelector("#area").innerHTML = area.toFixed(3).replace(".", ",");
