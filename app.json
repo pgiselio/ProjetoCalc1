@@ -1,0 +1,230 @@
+{
+	"metadata": {
+		"type": "App"
+	},
+	"project": {
+		"shadows": true,
+		"shadowType": 1,
+		"vr": false,
+		"toneMapping": 0,
+		"toneMappingExposure": 1
+	},
+	"camera": {
+		"metadata": {
+			"version": 4.6,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "6febafb1-bf77-483a-a480-61b91cf8978d",
+			"type": "PerspectiveCamera",
+			"name": "Camera",
+			"layers": 1,
+			"matrix": [-0.012015207721320253,-5.551115123125783e-17,0.9999278147863542,0,0.3626429515688008,0.9319179692867532,0.004357544942084512,0,-0.93185069858904,0.36266913091749886,-0.011197187980211298,0,-15.004897359960893,5.83979074467938,-0.18029997360913755,1],
+			"up": [0,1,0],
+			"fov": 50,
+			"zoom": 1,
+			"near": 0.1,
+			"far": 100000,
+			"focus": 10,
+			"aspect": 1.8241379310344827,
+			"filmGauge": 35,
+			"filmOffset": 0
+		}
+	},
+	"scene": {
+		"metadata": {
+			"version": 4.6,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"geometries": [
+			{
+				"uuid": "8e26f805-4983-4908-a534-9b7e262ab765",
+				"type": "CylinderGeometry",
+				"radiusTop": 1,
+				"radiusBottom": 1,
+				"height": 1,
+				"radialSegments": 32,
+				"heightSegments": 1,
+				"openEnded": false,
+				"thetaStart": 0,
+				"thetaLength": 6.283185307179586
+			},
+			{
+				"uuid": "29072502-26f1-4cd8-b5c5-ab617d79a907",
+				"type": "SphereGeometry",
+				"radius": 1,
+				"widthSegments": 32,
+				"heightSegments": 16,
+				"phiStart": 0,
+				"phiLength": 6.283185307179586,
+				"thetaStart": 0,
+				"thetaLength": 3.141592653589793
+			}],
+		"materials": [
+			{
+				"uuid": "f194e563-86d7-44c5-a62e-12f5ec31a2c6",
+				"type": "MeshStandardMaterial",
+				"color": 16777215,
+				"roughness": 1,
+				"metalness": 0,
+				"emissive": 0,
+				"envMapIntensity": 1,
+				"blendColor": 0
+			},
+			{
+				"uuid": "736d4bdc-5094-45f3-ab7a-7619886b052e",
+				"type": "MeshStandardMaterial",
+				"color": 16777215,
+				"roughness": 1,
+				"metalness": 0,
+				"emissive": 0,
+				"envMapIntensity": 1,
+				"blendColor": 0
+			}],
+		"object": {
+			"uuid": "3741222A-BD8F-401C-A5D2-5A907E891896",
+			"type": "Scene",
+			"name": "Scene",
+			"layers": 1,
+			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+			"up": [0,1,0],
+			"background": 11184810,
+			"children": [
+				{
+					"uuid": "B7CBBC6F-EC26-49B5-8D0D-67D9C535924B",
+					"type": "Group",
+					"name": "Dummy",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,-0.2765496100698819,4,1],
+					"up": [0,1,0],
+					"children": [
+						{
+							"uuid": "60B69C58-4201-43FD-815E-AD2EDFBBD0CE",
+							"type": "PerspectiveCamera",
+							"name": "PerspectiveCamera",
+							"layers": 1,
+							"matrix": [-0.9999999999999998,1.2213579822762483e-16,8.969092368767703e-18,0,1.2246467991473532e-16,0.9973144772244581,0.07323819712763169,0,0,0.07323819712763167,-0.9973144772244579,0,0,2.23855020307887,-0.5457602106068462,1],
+							"up": [0,1,0],
+							"fov": 60.4,
+							"zoom": 1,
+							"near": 0.1,
+							"far": 100,
+							"focus": 10,
+							"aspect": 1.8241379310344827,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}]
+				},
+				{
+					"uuid": "c94b1ee5-0ea8-4ee4-a261-3bd0de24cf5b",
+					"type": "Group",
+					"name": "Group",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.5032490632105733,0,1],
+					"up": [0,1,0],
+					"children": [
+						{
+							"uuid": "3c46d72d-d6e2-4680-a384-f5df2dd22c49",
+							"type": "Mesh",
+							"name": "Cylinder",
+							"layers": 1,
+							"matrix": [1,0,0,0,0,3.04,0,0,0,0,1,0,0,0,0,1],
+							"up": [0,1,0],
+							"geometry": "8e26f805-4983-4908-a534-9b7e262ab765",
+							"material": "f194e563-86d7-44c5-a62e-12f5ec31a2c6"
+						},
+						{
+							"uuid": "d996ba5b-595f-4dd8-8bec-0e85705150e5",
+							"type": "Mesh",
+							"name": "Sphere",
+							"layers": 1,
+							"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1.533,0,1],
+							"up": [0,1,0],
+							"geometry": "29072502-26f1-4cd8-b5c5-ab617d79a907",
+							"material": "736d4bdc-5094-45f3-ab7a-7619886b052e"
+						}]
+				},
+				{
+					"uuid": "E2939A7B-5E40-438A-8C1B-32126FBC6892",
+					"type": "PointLight",
+					"name": "PointLight 1",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.493649587000665,4.7692844276679205,-0.6409564226864553,1],
+					"up": [0,1,0],
+					"color": 9474221,
+					"intensity": 3.19,
+					"distance": 0,
+					"decay": 1,
+					"shadow": {
+						"camera": {
+							"uuid": "EFF42F46-1E27-4B36-B9D9-CF7D879D258E",
+							"type": "PerspectiveCamera",
+							"layers": 1,
+							"up": [0,1,0],
+							"fov": 90,
+							"zoom": 1,
+							"near": 0.5,
+							"far": 500,
+							"focus": 10,
+							"aspect": 1,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}
+					}
+				},
+				{
+					"uuid": "3412781E-27CC-43C3-A5DB-54C0C8E42ED6",
+					"type": "PointLight",
+					"name": "PointLight 2",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0.00026204126768702984,2.4828506035390188,3.2884458575969897,1],
+					"up": [0,1,0],
+					"color": 12773063,
+					"intensity": 1,
+					"distance": 0,
+					"decay": 1,
+					"shadow": {
+						"camera": {
+							"uuid": "81E800FE-E8A7-4A9E-AFAA-4F04FD56AFE4",
+							"type": "PerspectiveCamera",
+							"layers": 1,
+							"up": [0,1,0],
+							"fov": 90,
+							"zoom": 1,
+							"near": 0.5,
+							"far": 500,
+							"focus": 10,
+							"aspect": 1,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}
+					}
+				},
+				{
+					"uuid": "95b257b4-c16c-407a-a2f6-079f7bd025d8",
+					"type": "AmbientLight",
+					"name": "AmbientLight",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,1.402881540044902,6.181991404874569,0,1],
+					"up": [0,1,0],
+					"color": 2236962,
+					"intensity": 4.5
+				}]
+		}
+	},
+	"scripts": {
+		"60B69C58-4201-43FD-815E-AD2EDFBBD0CE": [
+			{
+				"name": "Player Camera",
+				"source": "player.setCamera( this );"
+			}],
+		"B7CBBC6F-EC26-49B5-8D0D-67D9C535924B": [
+			{
+				"name": "Orbit",
+				"source": "function update( event ) {\n\n\tvar time = event.time * 0.001;\n\n\tthis.position.x = Math.sin( time ) * 4;\n\tthis.position.z = Math.cos( time ) * 4;\n\tthis.lookAt( scene.position );\n\n}"
+			}]
+	},
+	"environment": null
+}
