@@ -59,15 +59,17 @@ function formSubmit(e) {
   return false;
 }
 function gerarSilo(m) {
-  let matricula;
+    let matricula;
+    let matriculaInput = document.querySelector("#matricula");
+    matriculaInput.classList.remove("is-invalid");
   if (m) {
     matricula = m;
     document.querySelector("#matricula").value = m;
   } else {
-    matricula = document.querySelector("#matricula").value;
+    matricula = matriculaInput.value;
   }
   if (isNaN(matricula)) {
-    alert("Matrícula inválida");
+    matriculaInput.classList.add("is-invalid");
     return false;
   }
 
