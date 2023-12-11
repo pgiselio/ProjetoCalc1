@@ -87,7 +87,7 @@ function gerarSilo(m) {
 
   altura = Math.pow((3 * volume) / Math.PI, 1 / 3);
 
-  raio = Math.pow((3 * volume) / (Math.PI), 1 / 3) / 2;
+  raio = Math.pow((3 * volume) / (8 * Math.PI), 1 / 3);
 
   area = 2 * Math.PI * raio * altura + 2 * Math.PI * Math.pow(raio, 2);
   
