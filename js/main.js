@@ -94,9 +94,7 @@ function gerarSilo(m) {
   custoTotal =
     2 * custoPorMetro * Math.pow(9 * Math.PI * volumeAoQuadrado, 1 / 3);
 
-    var custoTotal2 = ((4*volume*custoPorMetro/Math.pow(raio, 3)) + 16*Math.PI*custoPorMetro/3);
-    custoTotal2 = 2 * 41* Math.PI * raio * altura + 2 *41* Math.PI * Math.pow(raio, 2);
-    console.log(custoTotal2/area);
+    // var custoTotal2 = ((4*volume*custoPorMetro/Math.pow(raio, 3)) + 16*Math.PI*custoPorMetro/3);
   document.querySelector("#raio").innerHTML = raio.toFixed(3).replace(".", ",");
   document.querySelector("#volume").innerHTML = volume;
   document.querySelector("#altura").innerHTML = altura.toFixed(3)

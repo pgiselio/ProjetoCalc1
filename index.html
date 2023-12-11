@@ -44,20 +44,20 @@
 
             <div class="d-flex gap-3  flex-wrap align-items-center justify-content-center">
                 <div class="silo d-flex justify-content-center" style="width: 210px;">
-                    <canvas id="canvas" width="150" height="300"></canvas>
+                    <canvas id="canvas" width="150" height="200"></canvas>
                 </div>
-                <form onsubmit="return formSubmit(event)" class="d-flex flex-column needs-validation" novalidate>
-                    <div class="mb-3 has-validation">
-                        <label for="matricula" class="form-label">Matrícula</label>
-                        <input type="text" class="form-control" value="20230076876" id="matricula" name="matricula"
-                            required>
-                        <div class="invalid-feedback">
-                            É necessário informar a matrícula.
+                <div>
+                    <form onsubmit="return formSubmit(event)" class="d-flex flex-column needs-validation">
+                        <div class="mb-3 has-validation">
+                            <label for="matricula" class="form-label">Matrícula</label>
+                            <input type="text" class="form-control" value="20230076876" id="matricula" name="matricula">
+                            <div class="invalid-feedback">
+                                É necessário informar a matrícula.
+                            </div>
                         </div>
-
-                    </div>
-                    <button type="submit" class="btn btn-primary">Gerar dados do Silo</button>
-                </form>
+                        <button type="submit" class="btn btn-primary">Gerar dados do Silo</button>
+                    </form>
+                </div>
             </div>
             <table class="table" style="width: fit-content; max-width: 100%;">
                 <tbody>
