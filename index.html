@@ -20,15 +20,61 @@
     #canvas {
         position: absolute;
         z-index: 2;
-        /* fill-opacity: 0.6; */
+        opacity: 0.8;
+        /* animation: waves 2s linear infinite; */
+
+    }
+
+    #canvas.altura {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transition: clip-path 1s ease;
+    }
+
+    #canvas.volumer {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+        transition: clip-path 1s ease;
+    }
+
+    #canvas.playVolumer {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        transition: clip-path 2s ease;
     }
 
     #canvas~div {
         position: relative;
         z-index: 1;
-        /* opacity: .5; */
+        opacity: 0.8;
         border-radius: 10px;
         overflow: hidden;
+        transition: opacity .5s ease;
+    }
+
+    #canvas.volumer~div {
+        opacity: 0.6;
+        transition: opacity 1s ease;
+    }
+
+    
+    @keyframes waves {
+
+        0%,
+        100% {
+            clip-path: polygon(0 8%, 7% 6%, 14% 5%, 21% 5%, 28% 6%, 34% 8%, 40% 12%, 46% 17%, 50% 20%, 54% 23%, 60% 25%, 66% 26%, 70% 26%, 77% 25%, 83% 23%, 89% 21%, 95% 19%, 100% 17%, 100% 100%, 0% 100%);
+        }
+
+        50% {
+            clip-path: polygon(0 15%, 9% 21%, 14% 23%, 18% 25%, 21% 26%, 30% 28%, 32% 28%, 40% 27%, 46% 26%, 52% 23%, 57% 19%, 62% 15%, 68% 11%, 73% 8%, 79% 6%, 86% 5%, 93% 5%, 100% 6%, 100% 100%, 0% 100%);
+        }
+    }
+
+    @keyframes playVolumerAnimation {
+        0%, 100% {
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 1;
+        }
     }
 </style>
 
@@ -50,7 +96,7 @@
                     <form onsubmit="return formSubmit(event)" class="d-flex flex-column needs-validation">
                         <div class="mb-3 has-validation">
                             <label for="matricula" class="form-label">Matrícula</label>
-                            <input type="text" class="form-control" value="20230076876" id="matricula" name="matricula">
+                            <input type="text" class="form-control" value="" id="matricula" name="matricula">
                             <div class="invalid-feedback">
                                 Matricula inválida
                             </div>
@@ -61,7 +107,7 @@
             </div>
             <table class="table" style="width: fit-content; max-width: 100%;">
                 <tbody>
-                    <tr onclick="">
+                    <tr onclick="desenharVolumer()">
                         <th scope="row">Volume:</th>
                         <td><span id="volume">0</span> m³</td>
                     </tr>
@@ -73,7 +119,7 @@
                         <th scope="row">Área:</th>
                         <td><span id="area">0</span> m²</td>
                     </tr>
-                    <tr>
+                    <tr onclick="desenharAltura()">
                         <th scope="row">Altura:</th>
                         <td><span id="altura">0</span> m</td>
                     </tr>
